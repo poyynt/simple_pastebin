@@ -1,0 +1,7 @@
+secret_key
+__pycache__
+*/__pycache__
+std*.log
+*.bak
+app.db
+.DS_Store
