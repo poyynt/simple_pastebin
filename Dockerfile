@@ -23,10 +23,10 @@ ENV VIRTUAL_ENV=/home/app/venv
 # python setup
 RUN python -m venv $VIRTUAL_ENV
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
-RUN export FLASK_APP=xyloid/app.py
+RUN export FLASK_APP=simple_pastebin/app.py
 RUN pip install -r requirements.txt
 
 # define the port number the container should expose
 EXPOSE 80
 
-CMD ["python", "run.py"]
+CMD ["flask", "run"]
