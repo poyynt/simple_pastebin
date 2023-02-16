@@ -71,7 +71,7 @@ def fix_werkzeug_logging():
 class Data(db.Model):
 	internal_id = db.Column(
 		name="id", type_=db.Integer, primary_key=True,
-		unique=True, nullable=False, auto_increment=True)
+		unique=True, nullable=False)
 	name = db.Column(db.String(128), nullable=False)
 	value = db.Column(db.String(131072), nullable=False)
 	token = db.Column(db.String(36), unique=True, nullable=False)
