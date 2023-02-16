@@ -1,9 +1,0 @@
-{% extends "base.html" %}
-{% block title %}{{ name }}{% endblock %}
-{% block content %}
-<script src="{{ url_for('static', filename='prism.js') }}"></script>
-<pre>{{ name }}</pre>
-<pre><code class="language-{{ lang }}">{{ value }}</code></pre>
-<button><a style="text-decoration: none; color: initial;" href="{{ url_for('send', token=token) }}">Download</a></button>
-
-{% endblock %}
