@@ -80,7 +80,7 @@ class Data(db.Model):
 
 app = Flask(__name__, static_url_path=f"{BASE_PATH}/static")
 app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get(
-	"XYLOID_DATABASE_URI", default="sqlite:///app.db")
+	"PB_DATABASE_URI", default="sqlite:///app.db")
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.config["JSON_AS_ASCII"] = False
 app.config["JSON_SORT_KEYS"] = False
