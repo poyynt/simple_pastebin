@@ -86,6 +86,10 @@ app.config["JSON_AS_ASCII"] = False
 app.config["JSON_SORT_KEYS"] = False
 app.config["JSONIFY_PRETTYPRINT_REGULAR"] = True
 
+# https://stackoverflow.com/a/64699503 resolve connection reset bug
+app.config['SQLALCHEMY_ENGINE_OPTIONS'] = {"pool_pre_ping": True}
+app.config['SQLALCHEMY_POOL_RECYCLE'] = 300
+
 if not os.path.exists("secret_key"):
 	with open("secret_key", "wb") as fd:
 		fd.write(token_bytes(32))
